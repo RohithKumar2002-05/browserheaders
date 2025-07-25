@@ -1,0 +1,231 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-montserrat);
+  --font-serif: var(--font-playfair);
+  --font-display: var(--font-cormorant);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  
+  /* Royal theme colors */
+  --royal-gold: #c9a55c;
+  --royal-gold-light: #e0c688;
+  --royal-gold-dark: #a88440;
+  --royal-purple: #4a3b52;
+  --royal-purple-light: #6a5775;
+  --royal-purple-dark: #352a3b;
+  --royal-burgundy: #7d2e46;
+  --royal-burgundy-light: #9d4a62;
+  --royal-burgundy-dark: #5d1e32;
+  --royal-navy: #1e2a4a;
+  --royal-navy-light: #2d3e6b;
+  --royal-navy-dark: #121a2e;
+  --royal-emerald: #2a5a4b;
+  --royal-emerald-light: #3d7a67;
+  --royal-emerald-dark: #1a3c30;
+  --royal-black: #0f0f1a;
+  --royal-cream: #f8f7f2;
+}
+
+:root {
+  --radius: 0.625rem;
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: oklch(0.205 0 0);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+  --accent: oklch(0.97 0 0);
+  --accent-foreground: oklch(0.205 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+}
+
+.dark {
+  --background: #0f0f1a;
+  --foreground: #f8f7f2;
+  --card: #161625;
+  --card-foreground: #f8f7f2;
+  --popover: #161625;
+  --popover-foreground: #f8f7f2;
+  --primary: #c9a55c; /* Refined gold */
+  --primary-foreground: #0f0f1a;
+  --secondary: #4a3b52; /* Deep royal purple */
+  --secondary-foreground: #f8f7f2;
+  --muted: #232336;
+  --muted-foreground: #b8b5ad;
+  --accent: #7d2e46; /* Rich burgundy */
+  --accent-foreground: #f8f7f2;
+  --destructive: #e54b4b;
+  --border: rgba(248, 247, 242, 0.1);
+  --input: rgba(248, 247, 242, 0.15);
+  --ring: #c9a55c;
+}
+
+/* Custom animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.5s ease-out;
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+/* Typography */
+h1, h2, h3, h4 {
+  font-family: var(--font-playfair);
+  letter-spacing: 0.02em;
+}
+
+.font-display {
+  font-family: var(--font-cormorant);
+}
+
+body {
+  font-family: var(--font-montserrat);
+  letter-spacing: 0.01em;
+}
+
+/* Patterns */
+.bg-pattern {
+  background-image: radial-gradient(circle, rgba(201, 165, 92, 0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Section themes - Gold, Purple & Burgundy */
+.theme-gold {
+  --background: var(--royal-black);
+  --foreground: var(--royal-cream);
+  --primary: var(--royal-gold);
+  --primary-foreground: var(--royal-black);
+  --secondary: var(--royal-gold-dark);
+  --accent: var(--royal-gold-light);
+  --muted: rgba(201, 165, 92, 0.2);
+  --border: rgba(201, 165, 92, 0.3);
+}
+
+.theme-purple {
+  --background: var(--royal-purple-dark);
+  --foreground: var(--royal-cream);
+  --primary: var(--royal-purple-light);
+  --primary-foreground: var(--royal-cream);
+  --secondary: var(--royal-gold);
+  --accent: var(--royal-purple);
+  --muted: rgba(74, 59, 82, 0.3);
+  --border: rgba(201, 165, 92, 0.3);
+}
+
+/* Button styles */
+.btn-primary {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.25rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.25rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  transition: all 0.2s ease;
+}
+
+.btn-secondary:hover {
+  background-color: rgba(212, 175, 55, 0.1);
+  transform: translateY(-1px);
+}
+

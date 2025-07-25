@@ -1,0 +1,9 @@
+This directory will contain the following images:
+
+1. hero-bg.jpg - Dark, elegant image for the hero section
+2. product1.jpg through product8.jpg - Product images
+3. gallery1.jpg through gallery12.jpg - Gallery images
+4. team1.jpg through team4.jpg - Team member photos
+5. offer1.jpg through offer3.jpg - Promotional images
+
+Please add appropriate high-quality images to enhance the luxury clothing brand website.
