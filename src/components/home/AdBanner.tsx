@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 
-export default function AdBanner() {
+export default function AdBanner() {       
   return (
     <section className="py-16 bg-royal-navy relative overflow-hidden">
       <div className="absolute inset-0 bg-pattern opacity-10"></div>
