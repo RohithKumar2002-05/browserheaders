@@ -1,6 +1,6 @@
 {
   "packageId": "com.browserheaders.twa",
-  "host": "https://browserheaders.vercel.app/",
+  "host": "browserheaders.vercel.app",
   "name": "Royal-Attire",
   "launcherName": "Royal-Attire",
   "display": "fullscreen",
