@@ -2,7 +2,7 @@
   "name": "Royal-Attire",
   "short_name": "Royal-Attire",
   "start_url": "/",
-  "display": "fullscreen",
+  "display": "standalone",
   "description": "Royal-Attire",
   "display_override": [
     "fullscreen",
