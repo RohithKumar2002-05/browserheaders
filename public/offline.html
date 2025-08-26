@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
+  <title>You are offline</title>
+  <style>
+    /* Prevent all scrolling */
+    html, body {
+      overflow: hidden;
+      position: relative;
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+
+    /* Full viewport flex container */
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center; /* vertical centering */
+      align-items: center;     /* horizontal centering */
+      min-height: 100vh;
+      background: #fff url('/offlinepage.png') center center / contain no-repeat;
+      text-align: center;
+      font-family: Arial, sans-serif;
+      color: #333;
+    }
+
+    .content {
+      background: rgba(255,255,255,0.85);
+      padding: 24px;
+      border-radius: 8px;
+      width: 90%;
+      max-width: 360px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+    }
+
+    h1 {
+      font-size: 1.6rem;
+      margin: 0;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.4;
+      margin: 0;
+    }
+
+    button {
+      padding: 12px 24px;
+      font-size: 1rem;
+      color: #333;
+      border: 2px solid #f3c94f;
+      background: transparent;
+      border-radius: 4px;
+      cursor: pointer;
+      transition:  0.2s;
+    }
+    button:hover {
+      background-color: #f3c94f;
+    }
+
+    .bottom-logo {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 150px;
+      max-width: 50%;
+    }
+
+    @media (max-width: 480px) {
+      h1 { font-size: 1.4rem; }
+      p { font-size: 0.95rem; }
+      button { padding: 10px 20px; font-size: 0.95rem; }
+      .bottom-logo { width: 150px; bottom: 30px; }
+    }
+  </style>
+</head>
+<body >
+  <div class="content">
+    <img alt="" src="data:image/octet-stream;base64,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" />
+    <h1>You are currently offline</h1>
+    <p>
+      We can’t show you the content because you’re not connected to the internet.
+      Once you're back online, tap the button below to refresh.
+    </p>
+    <button onclick="window.location.reload()">Refresh</button>
+  </div>
+</body>
+</html>

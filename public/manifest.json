@@ -1,0 +1,84 @@
+{
+  "name": "Royal-Attire",
+  "short_name": "Royal-Attire",
+  "start_url": "/",
+  "display": "fullscreen",
+  "description": "Royal-Attire",
+  "display_override": [
+    "fullscreen",
+    "standalone",
+    "minimal-ui"
+  ],
+  "lang": "en",
+  "dir": "auto",
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
+  "orientation": "portrait",
+  "iarc_rating_id": "e12345678-abcd-efgh-ijkl-1234567890ab",
+  "service_worker": {
+  "src": "/service-worker.js",
+  "scope": "/",
+  "type": "classic"
+      },
+  "icons": [
+
+    {
+
+       "src": "/appicon.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "any"
+
+    },
+    {
+      "src": "/logo_icons/android/res/mipmap-xxxhdpi/ic_launcher.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/logo_icons/android/res/mipmap-xxxhdpi/ic_launcher.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/logo_icons/android/play_store_512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/logo_icons/android/play_store_512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/logo_icons/android/play_store_512.png",
+      "sizes": "2880x1800",
+      "type": "image/png",
+      "description": "A screenshot of the home page"
+    }
+  ],
+  "related_applications": [
+    {
+      "platform": "windows",
+      "url": "/"
+    },
+    {
+      "platform": "play",
+      "url": "/"
+    }
+  ],
+  "prefer_related_applications": false,
+  "shortcuts": [
+    {
+      "name": "Royal-Attire",
+      "url": "/",
+      "description": "Royal-Attire"
+    }
+  ]
+}

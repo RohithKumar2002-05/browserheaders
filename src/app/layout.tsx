@@ -1,10 +1,8 @@
 import type { Metadata } from "next";
 import { Playfair_Display, Cormorant, Montserrat } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/layout/Navbar";
-import Footer from "@/components/layout/Footer";
-import { CartProvider } from '@/context/CartContext';
 import { ClerkProvider } from '@clerk/nextjs'
+import ClientLayout from "@/components/home/ClientLayout";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -37,18 +35,18 @@ export default function RootLayout({
   return (
     <ClerkProvider>
     <html lang="en" className="dark">
+      <head>
+      <link rel="manifest" href="/manifest.json"/>
+
+      <link rel="apple-touch-icon" sizes="180x180" href="/appicon180x180"/>
+      </head>
       <body
         className={`${playfair.variable} ${cormorant.variable} ${montserrat.variable} antialiased dark`}
       >
-         <CartProvider>
-        <div className="flex flex-col min-h-screen">
-          <Navbar />
-          <main className="flex-grow">
-            {children}
-          </main>
-          <Footer />
-        </div>
-        </CartProvider>
+
+     <ClientLayout>{children}</ClientLayout>
+
+
       </body>
     </html>
     </ClerkProvider>
