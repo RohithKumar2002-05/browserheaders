@@ -261,13 +261,13 @@ textarea {
     -ms-overflow-style: none;
   }
 }
-  border-radius: 0.25rem;
+  /* border-radius: 0.25rem;
   font-weight: 500;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   font-size: 0.875rem;
   transition: all 0.2s ease;
-}
+} */
 
 .btn-primary:hover {
   opacity: 0.9;
