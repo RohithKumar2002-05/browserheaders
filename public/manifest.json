@@ -5,9 +5,7 @@
   "display": "fullscreen",
   "description": "Royal-Attire",
   "display_override": [
-    "fullscreen",
-    "standalone",
-    "minimal-ui"
+    "fullscreen"
   ],
   "lang": "en",
   "dir": "auto",
