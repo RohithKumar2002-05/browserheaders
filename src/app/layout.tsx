@@ -25,6 +25,30 @@ const montserrat = Montserrat({
 export const metadata: Metadata = {
   title: "Royal Attire | Luxury Clothing Brand",
   description: "Discover our exclusive collection of luxury clothing and accessories",
+  manifest: "/manifest.json",
+  themeColor: "#ffffff",
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
+    maximumScale: 1,
+    userScalable: false,
+    viewportFit: "cover",
+  },
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "Royal Attire",
+  },
+  formatDetection: {
+    telephone: false,
+  },
+  other: {
+    "mobile-web-app-capable": "yes",
+    "apple-mobile-web-app-capable": "yes",
+    "apple-mobile-web-app-status-bar-style": "default",
+    "msapplication-TileColor": "#ffffff",
+    "msapplication-tap-highlight": "no",
+  },
 };
 
 export default function RootLayout({
