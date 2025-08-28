@@ -4,7 +4,15 @@
     "namespace": "android_app",
     "package_name": "com.browserheaders.twa",
     "sha256_cert_fingerprints": [
-      "7D:F0:79:11:B4:2E:E1:CA:67:1D:CA:73:93:68:48:DB:7C:A1:3C:98:52:F2:9B:F0:F1:DB:20:3F:DA:EE:4A:FB"
+      "42:F4:F4:CD:0B:E7:80:85:BF:F7:14:E7:DF:37:E1:A4:4C:CB:7A:05:15:D8:C8:74:69:71:3B:BA:FB:BB:DD:24"
     ]
   }
+
+
+
+},{
+  "relation":["check_validation"],
+  "target":{
+    "namespace": "android_app",
+  "package_name":"com.browserheaders.twa"}
 }]
